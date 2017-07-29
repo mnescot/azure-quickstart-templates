@@ -5,6 +5,9 @@
     "newStorageAccountName": {
       "value": "GEN-UNIQUE"
     },
+    "newStorageAccountType": {
+      "value": "GENTYPE-UNIQUE"
+    },
     "adminUsername": {
       "value": "ubuntu"
     },

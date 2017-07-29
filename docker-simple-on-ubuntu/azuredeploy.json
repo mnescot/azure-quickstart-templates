@@ -8,6 +8,13 @@
         "description": "Unique DNS Name for the Storage Account where the Virtual Machine's disks will be placed."
       }
     },
+    "newStorageAccountType": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "metadata": {
+        "description": "Account Type for the new Storage Account."
+      }
+    },
     "adminUsername": {
       "type": "string",
       "metadata": {
@@ -71,7 +78,7 @@
       "apiVersion": "2017-06-01",
       "location": "[resourceGroup().location]",
       "properties": {
-        "accountType": "[variables('storageAccountType')]"
+        "sku": "[parameters('newStorageAccountType')]"
       }
     },
     {
@@ -194,4 +201,3 @@
     }
   ]
 }
-
